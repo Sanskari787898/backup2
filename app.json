@@ -36,24 +36,23 @@
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "19209257"
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "e172660ae308f028b10ce9a0a79a505a"
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Put Your elephant postgres sql db Get From https://www.elephantsql.com/ Here",
          "required": true,
-         "value": ""
+         "value": "postgres://ipfbmfqp:lpycvP3tM5jZYMLTMxSCpTTuTTs6C5nB@john.db.elephantsql.com/ipfbmfqp"
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "2023126723"
-     },
-
+         "value": "5087055282"
+      },
       "STRING_SESSION": {
          "description": "Fill Telethon String Session Get From t.me/JaiHindChatting .",
          "required": true,
@@ -65,49 +64,48 @@
       },
       "HEROKU_APP_NAME": {
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
-        "required": false
+        "required": false,
+        "value": "doramonxsanskaribot"
       },
       "BOT_USERNAME": {
          "description": "username of your bot without the @",
-         "value": "DevilTrishaRoBot"
+         "value": "DORAMONX_BOT"
       },
-
       "BOT_ID": {
          "description": "To Get Your Bot_id Using @username_to_id_bot Bot",
-         "value": ""
+         "value": "5092489636"
       },
-
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "LegendRajOp"
+         "value": "DORAMONX"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "JaiHindChatting"
+         "value": "DANGERZONESANSKARI"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections Get From https://www.mongodb.com To.",
          "required": true,
-         "value": ""
+         "value": "EnterYourMongo123 mongodb+srv://Sonal:Sonal@cluster0.n2jud.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
       },
       "IBM_WATSON_CRED_URL": {
          "description": "This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
          "required": false
-     },
-     "IBM_WATSON_CRED_PASSWORD": {
-        "description": "This is required for the speech to text module. Get your PASSWORD from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
-        "required": false
-     },
-     "EVENT_LOGS": {
+      },
+      "IBM_WATSON_CRED_PASSWORD": {
+         "description": "This is required for the speech to text module. Get your PASSWORD from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
+         "required": false
+      },
+      "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
-         "value": "-1001623671269"
+         "value": "-1001760422861"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": "-1001706523025"
+         "value": "-1001760422861"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
@@ -118,28 +116,26 @@
          "description": "Required for timezone information. Get yours from https://timezonedb.com/api",
          "required": true,
          "value": "-xyz"
-     }, 
-
+      }, 
       "API_OPENWEATHER": {
-        "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
-        "value": "",
-        "required": false
+         "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
+         "value": "",
+         "required": false
       },
-
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Masha support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": "2023126723 1442442077"
-     },
-        "ARQ_API": {
-            "description": "Get this from @ARQRobot.",
-            "required": true
-        },
-
+         "value": "5087055282 5038172987 2066469485 2023126723 1442442077"
+      },
+      "ARQ_API": {
+         "description": "Get this from @ARQRobot.",
+         "required": true,
+         "value": "TJAOJZ-HMPRKH-MRPNNN-YBDBNV-ARQ"
+      },
       "sw_api": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
          "required": false,
-         "value": ""
+         "value": "1gQH4B6dClxW6R3ban2y058SLpOCFml7B6d9hiuYKncJGqysajm9APgOHfSutIfE"
       }, 
       "STRICT_GBAN": {
          "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
@@ -148,22 +144,22 @@
       "DRAGONS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": "2023126723 1442442077"
+         "value": "5087055282 5038172987 2066469485 2023126723 1442442077"
       },
       "DEMONS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
          "required": false,
-         "value": "2023126723 1442442077"
+         "value": "5087055282 5038172987 2066469485 2023126723 1442442077"
       },
       "TIGERS": {
          "description": "A space separated list of user IDs who you wanna assign as tiger users.",
          "required": false,
-         "value": "2023126723 1442442077"
+         "value": "5087055282 5038172987 2066469485 2023126723 1442442077"
       },
       "WOLVES": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
          "required": false,
-         "value": "2023126723 1442442077"
+         "value": "5087055282 5038172987 2066469485 2023126723 1442442077"
       },
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
@@ -182,7 +178,7 @@
       "URL": {
          "description": "The Heroku App URL :-  https://appname.herokuapp.com/",
          "required": false,
-         "value": "https://appname.herokuapp.com/"
+         "value": "https://doramonxsanskaribot.herokuapp.com/"
       },
       "NO_LOAD": {
          "description": "Dont load these modules cause they shit, space separation",
@@ -209,7 +205,8 @@
       },
         "ARQ_API": {
             "description": "Get this from @ARQRobot.",
-            "required": true
+            "required": true,
+            "value": "TJAOJZ-HMPRKH-MRPNNN-YBDBNV-ARQ"
         },
       "BAN_STICKER": {
          "description": "ID of the sticker you want to use when banning people.",
