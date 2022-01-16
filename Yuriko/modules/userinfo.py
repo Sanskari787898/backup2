@@ -447,9 +447,19 @@ def set_about_me(update: Update, context: CallbackContext):
 def stats(update: Update, context: CallbackContext):
     stats = "<b>╔═━「 Current 𝗧𝗿𝗶𝘀𝗵𝗮 Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result += "\n╘═━ [Support](https://t.me/JaiHindChatting) [Updates](https://t.me/RymOfficial)"
+    result += "\n╘═━ [Support](@JaiHindChatting) [Updates](@RymOfficial)"
     update.effective_message.reply_text(
         result,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/Rymofficial"),
+                    InlineKeyboardButton(
+                        "𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/JaiHindChatting")
+                ],
+            ]
+        ),
         parse_mode=ParseMode.HTML, 
         disable_web_page_preview=True
    )
@@ -541,53 +551,34 @@ def __user_info__(user_id):
 __help__ = """
 *ID:*
 ✗ /id - `get the current group id. If used by replying to a message, gets that user's id.`
-
 ✗ /gifid - `reply to a gif to me to tell you its file ID.`
  
 *Self addded information:* 
-
 ✗ /setme - `<text> will set your info.`
-
 ✗ /me - `will get your or another user's info.`
-
 Examples:
-
 ✗ /setme - `I am a` *TRISHA* `Member.`
-
 ✗ /me - `@username(defaults to yours if no user specified)`
  
 *Information others add on you:* 
-
 ✗ /bio - `will get your or another user's bio. This cannot be set by yourself.`
-
 ✗ /setbio - `<text> while replying, will save another user's bio`
-
 *Examples:*
-
 ✗ /bio - `@username(defaults to yours if not specified).`
-
 ✗ /setbio - `This user is a` *Trisha* `Member (reply to the user)`
  
 *Overall Information about you:*
-
 ✗ /info - `get information about a user.`
  
 *json Detailed info:*
-
 ✗ /json - `Get Detailed info about any message.`
  
 *AFk:*
-
 `When marked as AFK, any mentions will be replied to with a message stating that you're not available!`
-
 ✗ /afk - `<reason> Mark yourself as AFK.`
-
   brb - `<reason> Same as the afk command, but not a command.` 
-
 *What is that health thingy?*
-
  `Come and see` [HP System explained](https://t.me/JaiHindChatting)
-
 *✗ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 💕 𝐁𝐲: 𝗗𝗲𝘃𝗶𝗟 𝗛𝗮𝗰𝗸𝗲𝗥 @JaiHindChatting !*
 """
 
