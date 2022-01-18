@@ -58,5 +58,5 @@ async def callback_query_handler(event):
 __mod_name__ = "MyInfo"
 
 __help__ = """
- ~ /me *:* Get Your Details On Inline. 
+ ~ /myinfo *:* Get Your Details On Inline. 
 """
