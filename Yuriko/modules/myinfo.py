@@ -13,7 +13,7 @@ yuriko2 = "https://telegra.ph/file/4900aa9aaf9d00959c483.jpg"
 yuriko3 = "https://telegra.ph/file/34d25026743628907a5be.jpg"
 yuriko4 = "https://telegra.ph/file/be79f8ea71eb69a8f8515.jpg"
 
-@register(pattern="/myinfo")
+@register(pattern="/me")
 async def proboyx(event):
   button = [[custom.Button.inline("CHECK",data="information")]]
   on = await aasf.send_message(event.chat, f"**❦ Hᴇʏ {(event.sender.first_name)}**\n\n**❦ I Aᴍ [𝐓𝐫𝐢𝐬𝐡𝐚](https://t.me/JaiHindChatting)**\n**❦ I Wᴀs Cʀᴇᴀᴛᴇᴅ Bʏ [RymOfficial](t.me/RymOfficial)**", file=yuriko1, buttons=button)
@@ -44,7 +44,7 @@ async def callback_query_handler(event):
   try:
     boy = event.sender_id
     PRO = await bot.get_entity(boy)
-    YURIKO = "YOUR DETAILS BY YURIKO \n"
+    YURIKO = "YOUR DETAILS BY DORAMON \n"
     YURIKO += f"FIRST NAME : {PRO.first_name} \n"
     YURIKO += f"LAST NAME : {PRO.last_name}\n"
     YURIKO += f"YOU BOT : {PRO.bot} \n"
@@ -55,8 +55,8 @@ async def callback_query_handler(event):
   except Exception as e:
     await event.reply(f"{e}")
 
-__mod_name__ = "Myinfo"
+__mod_name__ = "MyInfo"
 
 __help__ = """
- ~ /myinfo *:* Get Your Details On Inline. 
+ ~ /me *:* Get Your Details On Inline. 
 """
