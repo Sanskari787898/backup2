@@ -542,14 +542,14 @@ def yurikorobot_about_callback(update, context):
         )
     elif query.data == "yurikorobot_credit":
         query.message.edit_text(
-            text=f"<b> CREDIT FOR ❤Dᴏʀᴀᴍᴏɴ❤ DEV'S</b>\n"
+            text=f"<b>🚦Credits to My Developers ⚡</b>\n"
             
             f"\n`✗ Here Some Developers Helping in Making The ❤Dᴏʀᴀᴍᴏɴ❤ Bot`",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="𝗟𝗲𝗴𝗲𝗻𝗱 𝗥𝗮𝗷", url="t.me/LegendRajOp"),
+                    InlineKeyboardButton(text="⚡𝙃ɪᴍᴢᴢ❓", url="t.me/HeyHimzz"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp"),
@@ -565,8 +565,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *❤Dᴏʀᴀᴍᴏɴ❤*
-                 \nHere is the [🔥Source Code🔥](https://github.com/rakeshyt) .""",
+            text="""(**Repo Private**)""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -617,13 +616,13 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Hᴇʟᴘ ❔",
+                            text="𝗛ᴇʟᴘ ❔",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ 📢 ",
+                            text="𝗦ᴜᴘᴘᴏʀᴛ Cʜᴀᴛ 📢 ",
                             url="https://t.me/{}".format(SUPPORT_CHAT),
                         )
                     ],
