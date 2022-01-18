@@ -100,7 +100,7 @@ buttons = [
             text="⍼ 𝗜ɴʟɪɴᴇ ᛃ ", switch_inline_query_current_chat=""
         ),
         InlineKeyboardButton(
-        tex="🛠️ 𝗦ᴜᴘᴘᴏʀᴛ", url=f"http://DangerZoneSanskari"
+        text="🛠️ 𝗦ᴜᴘᴘᴏʀᴛ", url=f"http://DangerZoneSanskari"
         ),
         
     ],
