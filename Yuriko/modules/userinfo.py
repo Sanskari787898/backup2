@@ -131,7 +131,7 @@ def hpmanager(user):
 
 def make_bar(per):
     done = min(round(per / 10), 10)
-    return "■" * done + "□" * (10 - done)
+    return "☻︎" * done + "○" * (10 - done)
 
 
 def get_id(update: Update, context: CallbackContext):
@@ -170,7 +170,7 @@ def get_id(update: Update, context: CallbackContext):
 
     else:
         msg.reply_text(
-            f"This group's id is <code>{chat.id}</code>.", parse_mode=ParseMode.HTML,
+            f"This group''s id is <code>{chat.id}</code>.", parse_mode=ParseMode.HTML,
         )
 
 
@@ -254,8 +254,8 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text("<code>Getting info...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"╔═━「<b> Appraisal results:</b> 」\n"
-        f"✪ ID: <code>{user.id}</code>\n"
+        f"╔═━「<b> Showing results:</b> 」\n"
+        f"★ ID: <code>{user.id}</code>\n"
         f"✪ First Name: {html.escape(user.first_name)}"
     )
 
@@ -284,39 +284,39 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("Admin")
     if user_id not in [bot.id, 2023126723, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
+        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]  [?](t.me/HeyDevs)"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
         if spamwtc:
             text += "\n\n<b>This person is Spamwatched!</b>"
             text += f"\nReason: <pre>{spamwtc.reason}</pre>"
-            text += "\nAppeal at @jaiHindChatting"
+            text += "\nAppeal at @DANGERZONESanskari"
     except:
         pass  # don't crash if api is down somehow...
 
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is 'King'."
+        text += "\n\nThe Disaster level of this person is 'God',"
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'Prince'."
+        text += "\n\nThis user is member my 'Developer'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Emperor'."
+        text += "\n\nThe Disaster level of this person is 'SuperSudo'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Governor'."
+        text += "\n\nThe Disaster level of this person is 'Sudo'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Captain'."
+        text += "\n\nThe Disaster level of this person is 'Tiger."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Soldier'."
+        text += "\n\nThe Disaster level of this person is 'Wolve'."
         disaster_level_present = True
-    elif user.id == 2023126723:
-         text += "\n\nOwner Of A Bot. Queen Of @excrybaby. Bot Name Inspired From 'JoJo'."
+    elif user.id == 1087968824
+         text += "\n\nInformatin Cannot be extrected because User is anonymous."
          disaster_level_present = True
 
     try:
@@ -349,16 +349,7 @@ def info(update: Update, context: CallbackContext):
             message.reply_document(
                 document=open(f"{user.id}.png", "rb"),
                 caption=(text),
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                "𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/Rymofficial"),
-                            InlineKeyboardButton(
-                                "𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/JaiHindChatting")
-                        ],
-                    ]
-                ),
+                
                 parse_mode=ParseMode.HTML,
             )
 
@@ -367,16 +358,7 @@ def info(update: Update, context: CallbackContext):
         except IndexError:
             message.reply_text(
                 text, 
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                "𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/Rymofficial"),
-                            InlineKeyboardButton(
-                                "𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/JaiHindChatting")
-                        ],
-                    ]
-                ),
+                
                 parse_mode=ParseMode.HTML,
                 disable_web_page_preview=True
             )
@@ -445,21 +427,12 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>╔═━「 Current 𝗧𝗿𝗶𝘀𝗵𝗮 Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>╔═━「 Current Doramon's Stats 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result += "\n╘═━ [Support](@JaiHindChatting) [Updates](@RymOfficial)"
+    result += "\n╘═━★"
     update.effective_message.reply_text(
         result,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/Rymofficial"),
-                    InlineKeyboardButton(
-                        "𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/JaiHindChatting")
-                ],
-            ]
-        ),
+      
         parse_mode=ParseMode.HTML, 
         disable_web_page_preview=True
    )
@@ -505,13 +478,13 @@ def set_about_bio(update: Update, context: CallbackContext):
             )
             return
 
-        if user_id in [2023126723, 1087968824] and sender_id not in DEV_USERS:
+        if user_id in [5035631351] and sender_id not in DEV_USERS:
             message.reply_text("You are not authorised")
             return
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust the Ackermans to set my bio.",
+                "Erm... yeah, I only trust the my Owner to set my bio.",
             )
             return
 
@@ -550,36 +523,33 @@ def __user_info__(user_id):
 
 __help__ = """
 *ID:*
-✗ /id - `get the current group id. If used by replying to a message, gets that user's id.`
-✗ /gifid - `reply to a gif to me to tell you its file ID.`
+★ /id - `get the current group id. If used by replying to a message, gets that user's id.`
+★ /gifid - `reply to a gif to me to tell you its file ID.`
  
 *Self addded information:* 
-✗ /setme - `<text> will set your info.`
-✗ /me - `will get your or another user's info.`
+★ /setme - `<text> will set your info.`
+★ /me - `will get your or another user's info.`
 Examples:
-✗ /setme - `I am a` *TRISHA* `Member.`
-✗ /me - `@username(defaults to yours if no user specified)`
+★ /setme - `I am a` *Doramon* `Member.`
+★ /me - `@username(defaults to yours if no user specified)`
  
 *Information others add on you:* 
-✗ /bio - `will get your or another user's bio. This cannot be set by yourself.`
-✗ /setbio - `<text> while replying, will save another user's bio`
+★ /bio - `will get your or another user's bio. This cannot be set by yourself.`
+★ /setbio - `<text> while replying, will save another user's bio`
 *Examples:*
-✗ /bio - `@username(defaults to yours if not specified).`
-✗ /setbio - `This user is a` *Trisha* `Member (reply to the user)`
+★ /bio - `@username(defaults to yours if not specified).`
+★ /setbio - `This user is a` *Trisha* `Member (reply to the user)`
  
 *Overall Information about you:*
-✗ /info - `get information about a user.`
+★ /info - `get information about a user.`
  
 *json Detailed info:*
-✗ /json - `Get Detailed info about any message.`
+★ /json - `Get Detailed info about any message.`
  
 *AFk:*
 `When marked as AFK, any mentions will be replied to with a message stating that you're not available!`
-✗ /afk - `<reason> Mark yourself as AFK.`
+★ /afk - `<reason> Mark yourself as AFK.`
   brb - `<reason> Same as the afk command, but not a command.` 
-*What is that health thingy?*
- `Come and see` [HP System explained](https://t.me/JaiHindChatting)
-*✗ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 💕 𝐁𝐲: 𝗗𝗲𝘃𝗶𝗟 𝗛𝗮𝗰𝗸𝗲𝗥 @JaiHindChatting !*
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
