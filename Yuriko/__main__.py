@@ -82,52 +82,63 @@ def get_readable_time(seconds: int) -> str:
 yurikorobot_IMG = "https://telegra.ph/file/8b6f8f2bb4ff3912634c7.jpg"
 
 PM_START_TEXT = """
-*👋 𝐇𝐞𝐥𝐥𝐨 {} !*
-
-✗ *𝐈'𝐀𝐦 𝐀𝐧 𝐀𝐧𝐢𝐦𝐞-𝐓𝐡𝐞𝐦𝐞 𝐌𝐚𝐧𝐚𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭*
-✗ *𝐀𝐦 𝐕𝐞𝐫𝐲 𝐅𝐚𝐬𝐭 𝐀𝐧𝐝 𝐌𝐨𝐫𝐞 𝐄𝐟𝐟𝐢𝐜𝐢𝐞𝐧𝐭  𝐈 𝐏𝐫𝐨𝐯𝐢𝐝𝐞 𝐀𝐰𝐞𝐬𝐨𝐦𝐞  𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬!*
-────────────────────────
-× *𝐔𝐩𝐓𝐢𝐦𝐞:* `{}`
-× `{}` *𝐔𝐬𝐞𝐫, 𝐀𝐜𝐫𝐨𝐬𝐬* `{}` *𝐂𝐡𝐚𝐭𝐬.*
-────────────────────────
-✗ *𝐏𝐨𝐰𝐞𝐫𝐞𝐝 💕 𝐁𝐲: 𝗦𝗮𝗻𝘀𝗞𝗮𝗿𝗶 @DANGERZONESANSKARI !*
+***𝗧ʜᴇ 𝗗ᴏʀᴀᴍᴏɴ 🇽 ʙᴏᴛ**\n┏━━━━━━━━━━━━━━━━\n╭──────────────\nHey I am Doramon : A Group Management Bot. [ㅤ]https://telegra.ph/file/00ce03386a051de02ae34.png)\n╰──────────────\n╭──────────────\n➪ *Uᴘᴛɪᴍᴇ:* `{}`\n➪ `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*\n╰──────────────\nTo know more click on the following buttons.\n\n┗━━━━━━━━━━━━━━━━\n\n[@ᴛᴇᴀᴍ 🇽 ʙᴏᴛs](tg://blank)
 """
 
 buttons = [
-    [
+
+[
         InlineKeyboardButton(
-            text="𝐇𝐞𝐥𝐩 & 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬", callback_data="help_back"),
+            text="📬 𝗔ᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ", url="http://t.me/DoramonX_bot?startgroup=true"),
     ],
+          
     [
-        InlineKeyboardButton(text="𝐌𝐮𝐬𝐢𝐜", callback_data="yurikorobot_asst"),
-        InlineKeyboardButton(
-            text="𝐒𝐮𝐩𝐩𝐨𝐫𝐭", url=f"https://t.me/DANGERZONESANSKARI"
+         InlineKeyboardButton(
+            text="📢 𝗨ᴘᴅᴀᴛᴇꜱ", url=f"https://t.me/DoramonBotSupport"
         ),
-    ],
-    [
-        InlineKeyboardButton(text="𝐀𝐛𝐨𝐮𝐭", callback_data="yurikorobot_"),
         InlineKeyboardButton(
-            text="𝐁𝐚𝐬𝐢𝐜 𝐇𝐞𝐥𝐩", callback_data="yurikorobot_basichelp"
+            text="⍼ 𝗜ɴʟɪɴᴇ ᛃ ", switch_inline_query_current_chat=""
         ),
+        InlineKeyboardButton(
+        tex="🛠️ 𝗦ᴜᴘᴘᴏʀᴛ", url=f"http://DangerZoneSanskari"
+        ),
+        
     ],
+    
     [
-        InlineKeyboardButton(text="𝐀𝐝𝐝 ❤Dᴏʀᴀᴍᴏɴ❤ 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩", url="http://t.me/DORAMONX_BOT?startgroup=true"),
+        InlineKeyboardButton(text="🎴 𝗔ʙᴏᴜᴛ ᴍᴇ", callback_data="yurikorobot_"),
+        InlineKeyboardButton(
+            text="💡𝗛ᴏᴡ ᴛᴏ ᴜsᴇ? callback_data="yurikorobot_basichelp"
+        ),
+        
+    ],
+     [
+  InlineKeyboardButton(text="❔𝗛ᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
-*✗ MAIN COMMANDS ✗*
-
-✗ /start - `Starts me! Your probably already used this.`
-✗ /help - `Click this I ll let you know about myself!`
-✗ /settings - `in PM: will send you your settings for all supported modules.`
-✗ *In A Group: Will Redirect You To Pm With All That Chats Settings.*)"""
+Here are the List of Commands which you can use to make your group secure from Scammers / Spammers.
+"""
 
 
+DONATE_STRING = """Thankyou so much for showing your interest but we cant Except Donations.Instead of Donations you can share our Bot With Your friends."""
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- @DANGERZONESANSKARI 💕"""
+buttons = [
+
+[
+        InlineKeyboardButton(
+            text="📬 𝗔ᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ", url="http://t.me/DoramonX_bot?startgroup=true"),
+     ],
+     [
+        InlineKeyboardButton(
+            text="🎴 𝗦ʜᴀʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ ᴡɪᴛʜ ʏᴏᴜʀ ғʀɪᴇɴᴅs.", url="tg://share?text=Hey%20Dear%20Friend%2C%20I%20found%20a%20Best%20Bot%20on%20Telegram%20Which%20is%20SuperFast%20%2C%20Secure%20as%20Well%20as%20Free%2E%20Checkout%20This%20Amazing%20Bot%20@DoramonX_bot"),
+    ],
+    
+ ]
+
+
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -253,7 +264,7 @@ def start(update: Update, context: CallbackContext):
         )
         
 def error_handler(update, context):
-    """Log the error and send a telegram message to notify the developer."""
+    """Log the error and send a telegram message to notify the developer. @HeyHimzz """
     # Log the error before we do anything else, so we can see it even if something breaks.
     LOGGER.error(msg="Exception while handling an update:", exc_info=context.error)
 
@@ -380,11 +391,11 @@ def yurikorobot_about_callback(update, context):
     query = update.callback_query
     if query.data == "yurikorobot_":
         query.message.edit_text(
-            text=""" *❤Dᴏʀᴀᴍᴏɴ❤* - `A bot to manage your groups with additional features!`
-            \n`Here the basic help regarding use of ❤Dᴏʀᴀᴍᴏɴ❤.`
+            text=""" *𝗗ᴏʀᴀᴍᴏɴ* - `A bot to manage your groups with supercool features!`
+            \n`Here the basic help regarding use of 𝗗ᴏʀᴀᴍᴏɴ.`
             
             \n`Almost all modules usage defined in the help menu, checkout by sending` `/help`
-            \n`Report error/bugs click the Button`""",
+            \n`Report error / bugs click the Button`""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
