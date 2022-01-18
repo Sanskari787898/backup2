@@ -44,10 +44,10 @@ def mediainfo(media):
 
 @register(pattern="^/logo ?(.*)")
 async def logo_gen(event):
-    xx = await event.reply("`Bana raha hu roka todi ma bh insaan hu machine nahi😶...`")
+    xx = await event.reply("`Making Logo...Please Wait`")
     name = event.pattern_match.group(1)
     if not name:
-        await xx.edit("`Kuch text dega tab na logo banoga 😏!\nExample: /logo <Chup Chap apne name likha>!`")
+        await xx.edit("Give some Text to make Logo.\nExample: `/logo <Doramon>!`")
         return
     bg_, font_ = "", ""
     if event.reply_to_msg_id:
@@ -113,7 +113,7 @@ async def logo_gen(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [𝗗𝗲𝘃𝗶𝗟 𝗛𝗮𝗰𝗸𝗲𝗥](https://t.me/JaiHindChatting)",
+            caption="Logo by [𝗗ᴏʀᴀᴍᴏɴ](https://t.me/DoramonX_bot)",
             force_document=False,
         )
         os.remove(flnme)
@@ -127,7 +127,7 @@ async def logo_gen(event):
 
 @register(pattern="^/wlogo ?(.*)")
 async def logo_(event):
-    xx = await event.reply("`Bana raha hu roka todi ma bh insaan hu machine nahi😶...`")
+    xx = await event.reply("`Making Logo..Please wait..`")
     name = event.pattern_match.group(1)
     if not name:
         await xx.edit("`Provide some text to draw!\nExample: /wlogo <your name>!`")
@@ -196,7 +196,7 @@ async def logo_(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [𝗗𝗲𝘃𝗶𝗟 𝗛𝗮𝗰𝗸𝗲𝗥](https://t.me/JaiHindChatting)",
+            caption="Logo by [𝗗ᴏʀᴀᴍᴏɴ 𝗥ᴏʙᴏᴛ](https://t.me/DoramonX_bot)",
             force_document=False,
         )
         os.remove(flnme)
