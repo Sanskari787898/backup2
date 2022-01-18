@@ -315,10 +315,7 @@ def info(update: Update, context: CallbackContext):
     elif user.id in WOLVES:
         text += "\n\nThe Disaster level of this person is 'Wolve'."
         disaster_level_present = True
-    elif user.id == 1087968824
-         text += "\n\nInformatin Cannot be extrected because User is anonymous."
-         disaster_level_present = True
-
+ 
     try:
         user_member = chat.get_member(user.id)
         if user_member.status == "administrator":
