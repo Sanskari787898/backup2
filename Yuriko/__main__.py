@@ -108,7 +108,7 @@ buttons = [
     [
         InlineKeyboardButton(text="🎴 𝗔ʙᴏᴜᴛ ᴍᴇ", callback_data="yurikorobot_"),
         InlineKeyboardButton(
-            text="💡𝗛ᴏᴡ ᴛᴏ ᴜsᴇ? callback_data="yurikorobot_basichelp"
+            text="💡𝗛ᴏᴡ ᴛᴏ ᴜsᴇ?" callback_data="yurikorobot_basichelp"
         ),
         
     ],
