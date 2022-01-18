@@ -30,7 +30,7 @@ async def purge_messages(event):
 
     reply_msg = await event.get_reply_message()
     if not reply_msg:
-        await event.reply("Reply do vro jaha se purge karna ha ase nahi hota ye😏.")
+        await event.reply("Reply to a message to show me where to purge from.")
         return
     messages = []
     message_id = reply_msg.id
@@ -48,7 +48,7 @@ async def purge_messages(event):
     except:
         pass
     time_ = time.perf_counter() - start
-    text = f"Purged Successfully in {time_:0.2f} Second(s) Very Fast Kiya na💫😎"
+    text = f"Purged Successfully!"
     await event.respond(text, parse_mode="markdown")
 
 async def delete_messages(event):
@@ -71,7 +71,7 @@ async def delete_messages(event):
 
     message = await event.get_reply_message()
     if not message:
-        await event.reply("Whadya want to delete?")
+        await event.reply("  ")
         return
     chat = await event.get_input_chat()
     del_message = [message, event.message]
