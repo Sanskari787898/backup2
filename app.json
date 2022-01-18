@@ -31,7 +31,7 @@
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather Yaa",
          "required": true,
-         "value": ""
+         "value": "5020544520:AAH33XqtPOodW9jC57IPTD0D9Z4jwCOAnkQ"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
@@ -60,7 +60,7 @@
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
-        "value": ""
+        "value": "1"
       },
       "HEROKU_APP_NAME": {
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
@@ -87,7 +87,7 @@
       "MONGO_DB_URI": {
          "description": "Required for database connections Get From https://www.mongodb.com To.",
          "required": true,
-         "value": "EnterYourMongo123 mongodb+srv://Sonal:Sonal@cluster0.n2jud.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+         "value": "mongodb+srv://Sonal:Sonal@cluster0.n2jud.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
       },
       "IBM_WATSON_CRED_URL": {
          "description": "This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
